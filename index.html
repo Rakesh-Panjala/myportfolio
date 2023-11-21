@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Personal Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+</head>
+<body>
+    <header id="Home">
+       <nav>
+           <div class="left"> <h1>My Portfolio</h1> </div>
+         <div class="right">
+         <ul>
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#About">About</a></li>
+            <li><a href="#About">Education</a></li>
+            <li><a href="#About">Skills</a></li>
+            <li><a href="#About">Experence</a></li>
+            <li><a href="#Contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+     </header>
+
+     <main>
+      <section  class="firstSection ">
+       <div class="leftSection">
+        Hello...<br>My name is <span>Rakesh</span><br>
+       and I am a passionate
+       <span id="element"></span>
+       </div>
+       
+        <div class="rightSection"> <img src="bg.png" alt="">
+         </div>
+      </section>
+     
+     </main>
+     <!-------------------------------------------About----------------------------------------------------------------->
+     <div id="About">
+             <div class="container">
+                 <div class="row">
+
+                            <div class="about-col-1">  <h1 class="subtitle">About Me</h1>
+                            
+                              <div class="tab-titles">
+                                <p class="tab-links active-link" onclick="opentab('Education')">Education</p>
+                                <p class="tab-links" onclick="opentab('Skills')">Skills</p>
+                               <p class="tab-links" onclick="opentab('Experence')">Experence</p>
+
+                              </div>
+                              <div class="tab-contents active-tab" id="Education"> 
+                                <ul>
+                                  <li><span>Bachelor Of Technology</span> <br>
+                                    Sri Indu Institute Of Engineering & Technology.Hyderabad | 2016-2020 |</li>
+                                  <li><span>Intermediate</span> <br>SR Junior College.Hyderabd |2014-2016|</li>
+                                  <li><span>SSC</span><br>ZP high School.Madunoor|2013-2014|</li>
+                               </ul>
+
+                            </div> 
+                                    <div class="tab-contents" id="Skills" > 
+                                         <ul>
+                                            <li><span>Core Java</span></li>
+                                            <li><span>HTML</span></li>
+                                            <li><span>CSS</span></li>
+                                             <li><span>Java Script</span></li>
+                                    
+                                        </ul>
+                                </div>
+                                      <div class="tab-contents" id="Experence" >
+                                          <ul>
+                                            <li><span>Assistance System Engineer at Tata Consultance Services</span><br><br>
+                                            I started my carrier in a Tata Consultance Services Limited(TCSL) as a Assistance 
+                                              System Engineer-Trainee on 10th February 2022</li>
+                                          </ul>
+                                        
+                                      </div> 
+
+                             </div>
+
+                                 
+
+                         <div class="about-col-2">
+                            <img src="about.jpg">
+                         </div>
+          
+  
+
+                 </div>
+              </div>
+       </div>
+      </div>
+       <!-------------------------------------------Contact----------------------------------------------------------------->
+        
+         <div id="Contact">
+            <div class="container2">
+              <h1 class="sub-title">Contact</h1>
+              <div class="row2">
+                          
+                          
+                            <p><i class="bi bi-envelope-at-fill"></i> &nbsp; &nbsp;rakeshpanjala1998@gmail.com</p><br><br>
+                            
+                            <p><i class="bi bi-phone-fill"></i> &nbsp; 7893844493</p><br>
+
+                            <div class="social-icons">
+                              <p><i class="bi bi-linkedin"></i> &nbsp;  Rakesh Panjala</p>
+                            </div>
+
+                            <div>
+                              <a href="" class="btn">Download CV</a>
+                            </div>
+
+                            
+              </div>
+                     
+            </div>
+           
+         </div>   
+
+         <footer class="copyright">
+          <p><i class="bi bi-suit-heart-fill"></i> Copyrights by </p>
+
+        </footer>
+         
+
+    
+        <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+        <script>
+          var typed = new Typed('#element', {
+            strings: ['<br><i>Web Developer</i>.',],
+            typeSpeed: 60,
+          });
+        </script>
+        <script>
+
+          var tablinks = document.getElementsByClassName("tab-links");
+          var tabcontents = document.getElementsByClassName("tab-contents");
+          
+          function opentab(tabname){
+            for(tablink of tablinks){
+              tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+              tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+          }
+
+        </script>
+
+</body>
+
+</html>
